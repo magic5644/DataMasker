@@ -161,9 +161,15 @@ namespace DataMasker.Models
     public SqlValueConfig SqlValue { get; set; }
 
 
+    /// <summary>
+    /// Gets or sets the separator.
+    /// </summary>
     [JsonProperty(DefaultValueHandling = DefaultValueHandling.Ignore)]
     public string Separator { get; set; }
 
+    /// <summary>
+    /// Gets or sets the source columns.
+    /// </summary>
     [JsonProperty(DefaultValueHandling = DefaultValueHandling.Ignore)]
     public string[] SourceColumns { get; set; }
   }

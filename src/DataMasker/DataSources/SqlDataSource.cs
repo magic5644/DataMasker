@@ -117,6 +117,11 @@ namespace DataMasker.DataSources
             }
         }
 
+        /// <summary>
+        /// Gets the count of records in the specified table.
+        /// </summary>
+        /// <param name="config">The table configuration.</param>
+        /// <returns>The count of records.</returns>
         public int GetCount(TableConfig config)
         {
             using (SqlConnection connection = new SqlConnection(_connectionString))

@@ -24,10 +24,10 @@ namespace DataMasker
             return string.Join(", ", columnNames);
         }
 
-        /// <summary>
+        
         /// Gets the update columns.
         /// </summary>
-        /// 
+        /// <param name="columns">The columns.</param>
         /// <param name="paramPrefix">The parameter prefix.</param>
         /// <returns></returns>
         public static string GetUpdateColumns(
@@ -35,9 +35,9 @@ namespace DataMasker
             string paramPrefix = null)
         {
             return string.Join(
-                               ", ",
-                               columns.Where(x => !x.Ignore)
-                                      .Select(x => $"{Utils.Utils.MakeColumnNameSafe(x.Name)} = @{paramPrefix}{Utils.Utils.MakeParamNameSafe(x.Name)}"));
+                ", ",
+                columns.Where(x => !x.Ignore)
+                    .Select(x => $"{Utils.Utils.MakeColumnNameSafe(x.Name)} = @{paramPrefix}{Utils.Utils.MakeParamNameSafe(x.Name)}"));
         }
     }
 }

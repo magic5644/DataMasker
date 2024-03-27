@@ -12,6 +12,9 @@ namespace DataMasker.Models
     {
         public static readonly DataGenerationConfig Default = new DataGenerationConfig();
 
+        /// <summary>
+        /// Gets or sets the locale.
+        /// </summary>
         public string Locale { get; set; }
     }
 }

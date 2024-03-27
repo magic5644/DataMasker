@@ -15,5 +15,17 @@
             "stopAtEntry": false,
             "console": "internalConsole"
         }
+        ,
+        {
+            "name": "Launch Runner",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "Build Runner",
+            "program": "${workspaceFolder}/src/DataMasker.Runner/bin/Debug/net7.0/DataMasker.Runner.exe",
+            "args": ["-c ../DataMasker.Examples/config-local.json -l fr -u 100"],
+            "cwd": "${workspaceFolder}/src/DataMasker.Runner",
+            "stopAtEntry": false,
+            "console": "internalConsole"
+        }
     ]
 }
